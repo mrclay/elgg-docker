@@ -33,7 +33,7 @@ RUN sed -i "s#{{timezone}}#$TIMEZONE#g" /usr/local/etc/php/php.ini
 RUN composer self-update && \
     composer global require "fxp/composer-asset-plugin:~1.3"
 
-ENV ELGG_VERSION=2.3.4
+ENV ELGG_VERSION=2.3.7
 RUN git clone https://github.com/Elgg/Elgg.git .
 RUN git checkout ${ELGG_VERSION}
 
